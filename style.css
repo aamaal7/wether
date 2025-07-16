@@ -13,6 +13,30 @@ h1 {
 h2 {
   font-family: "Roboto Slab", serif;
 }
+
+.mode-toggle {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  background: none;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1em;
+  transition: background 0.3s, color 0.3s;
+  z-index: 100;
+}
+
+.dark-mode .mode-toggle {
+  border: 1px solid #fff;
+}
+
+.light-mode .mode-toggle {
+  border: 1px solid hsl(16, 25%, 4%);
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -60,6 +84,29 @@ button {
 
 input:focus {
   outline: none;
+}
+
+.light-mode .result {
+  border: 1px solid hsl(16, 25%, 4%);
+}
+
+.light-mode button:hover {
+  background-color: hsl(16, 25%, 4%);
+  color: #fff;
+}
+
+.light-mode button {
+  color: hsl(16, 25%, 4%);
+  border: 1px solid hsl(16, 25%, 4%);
+}
+
+.light-mode input::placeholder {
+  color: hsl(16, 25%, 4%);
+}
+
+.light-mode input {
+  color: hsl(16, 25%, 4%);
+  border: 1px solid hsl(16, 25%, 4%);
 }
 
 .dark-mode button:hover {
