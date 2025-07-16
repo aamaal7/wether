@@ -28,7 +28,9 @@ weatherBtn.onclick = async () => {
       throw new Error("City not found");
     }
     const data = await response.json();
-    document.getElementById("weather-result").innerHTML = `
+    const result = document.getElementById("weather-result");
+    result.style.display = "block";
+    result.innerHTML = `
       <h2>${data.name}, ${data.sys.country}</h2>
       <h2>Temperature: ${data.main.temp}°C</h2>
       <h2>Weather: ${data.weather[0].description}</h2>

@@ -1,6 +1,11 @@
 * {
   font-family: "Winky Rough", sans-serif;
 }
+
+body {
+  overflow-x: hidden;
+}
+
 input,
 button {
   font-family: "Anta", sans-serif;
@@ -15,9 +20,6 @@ h2 {
 }
 
 .mode-toggle {
-  position: absolute;
-  top: 1em;
-  right: 2em;
   background: none;
   border: 1px solid #aaa;
   border-radius: 20px;
@@ -26,7 +28,9 @@ h2 {
   color: inherit;
   font-size: 1em;
   transition: background 0.3s, color 0.3s;
-  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .dark-mode .mode-toggle {
@@ -60,6 +64,8 @@ h2 {
   padding: 1em;
   border-radius: 20px;
   width: 25em;
+  display: none;
+  text-align: center;
 }
 
 input {
@@ -129,4 +135,23 @@ input:focus {
 .light-mode {
   background-color: hsl(150, 25%, 95%);
   color: #000000;
+}
+
+@media (max-width: 600px) {
+  .main {
+    width: 100%;
+    padding: 1em;
+    gap: 2em;
+  }
+
+  .result {
+    padding: 1em;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+  input {
+    width: 100%;
+    max-width: 100%;
+  }
 }
