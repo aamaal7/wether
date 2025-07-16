@@ -1,0 +1,85 @@
+* {
+  font-family: "Winky Rough", sans-serif;
+}
+input,
+button {
+  font-family: "Anta", sans-serif;
+}
+h1 {
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  margin-top: 1em;
+}
+h2 {
+  font-family: "Roboto Slab", serif;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
+
+.entry-button {
+  margin-top: 2em;
+  display: flex;
+  gap: 0.5em;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  padding: 1em;
+  border-radius: 20px;
+  width: 25em;
+}
+
+input {
+  background-color: transparent;
+  box-shadow: none;
+  width: 25em;
+  padding: 1em;
+  border-radius: 20px;
+}
+
+button {
+  background-color: transparent;
+  box-shadow: none;
+  width: 10em;
+  padding: 1em;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+}
+
+.dark-mode button:hover {
+  background-color: #fff;
+  color: hsl(16, 25%, 4%);
+}
+
+.dark-mode input::placeholder {
+  color: #ffffff;
+}
+.dark-mode input {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.dark-mode {
+  background-color: hsl(16, 25%, 4%);
+  color: #ffffff;
+}
+.light-mode {
+  background-color: hsl(150, 25%, 95%);
+  color: #000000;
+}

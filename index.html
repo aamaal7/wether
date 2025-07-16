@@ -4,24 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&family=Roboto+Slab:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Wether</title>
   </head>
-  <body>
-    <h1>Wether</h1>
-    <p>Know if wether the weather is good...</p>
+  <body class="light-mode">
+    <div class="main">
+      <h1>Wether</h1>
+      <p>Know if wether the weather is good...</p>
 
-    <div class="entry-button">
-      <input type="text" id="city-input" placeholder="Enter city name" />
-      <button id="weather-btn">Get Weather</button>
+      <div class="entry-button">
+        <input type="text" id="city-input" placeholder="Enter city name" />
+        <button id="weather-btn">Get Weather</button>
+      </div>
+
+      <div id="weather-result" class="result">
+        <h2 id="city-name">Miami</h2>
+        <h2>Temperature: <span id="temperature"></span>°C</h2>
+        <h2>Condition: <span id="condition"></span></h2>
+        <h2>Humidity: <span id="humidity"></span>%</h2>
+        <h2>Visibility: <span id="wind-speed"></span></h2>
+      </div>
     </div>
 
-    <div id="weather-result" class="result">
-      <h2 id="city-name"></h2>
-      <p>Temperature: <span id="temperature"></span>°C</p>
-      <p>Condition: <span id="condition"></span></p>
-      <p>Humidity: <span id="humidity"></span>%</p>
-      <p>Visibility: <span id="wind-speed"></span></p>
-    </div>
     <script src="script.js"></script>
   </body>
 </html>
